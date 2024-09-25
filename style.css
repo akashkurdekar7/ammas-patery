@@ -1,7 +1,9 @@
 :root {
-  --primary-color: #ff5100;
-  --secondary-color: #ea6f35;
-  --bgc-color: #ffb796;
+  --primary-color: #ff6000;
+  --secondary-color: #ffa559;
+  --bgc-color: #ffe6c7;
+  --white-color: white;
+  --black-color: white;
 }
 
 * {
@@ -20,7 +22,7 @@ li,
 a {
   text-decoration: none;
   list-style: none;
-  color: black;
+  color: var(--black-color);
 }
 
 section {
@@ -64,7 +66,7 @@ nav {
 }
 .nav-items {
   font-size: 1rem;
-  color: white;
+  color: var(--white-color);
   position: relative;
   transition: color 0.5s linear;
   &:hover {
@@ -76,7 +78,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  color: white;
+  color: var(--white-color);
   text-transform: capitalize;
   cursor: pointer;
   letter-spacing: 2.5px;
@@ -111,16 +113,16 @@ nav {
 .nav-dropdown li {
   padding: 10px;
   width: 100%;
-  color: white;
+  color: var(--white-color);
 }
 
 .nav-dropdown a {
-  color: white;
+  color: var(--white-color);
   text-transform: capitalize;
   letter-spacing: 2.5px;
 }
 .nav-dropdown li:hover {
-  background-color: white;
+  background-color: var(--white-color);
   a {
     color: var(--primary-color);
   }
@@ -136,7 +138,7 @@ nav {
     font-size: 1.5rem;
   }
   &:hover {
-    color: white;
+    color: var(--white-color);
   }
 }
 
@@ -159,16 +161,13 @@ main {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
 }
-#variety-cake2 {
+#variety-cake2,
+#variety-cake4 {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   margin-top: 1rem;
 }
-#variety-cake3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 1rem;
-}
+
 .cake-circle {
   display: flex;
   flex: 1 1 30%;
@@ -221,7 +220,7 @@ main {
   bottom: 3.2rem;
   left: 50%;
   text-align: center;
-  color: white;
+  color: var(--white-color);
   z-index: 2;
   transform: translateX(-50%);
   text-transform: capitalize;
@@ -233,7 +232,7 @@ main {
   bottom: 2rem;
   left: 50%;
   text-align: center;
-  color: white;
+  color: var(--white-color);
   z-index: 2;
   transform: translateX(-50%);
   text-transform: capitalize;
@@ -263,11 +262,80 @@ main {
 }
 .icons ul li {
   padding: 1rem 2rem;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   border-radius: 20px 10px;
 }
 .icons ul li a {
   font-size: 1rem;
   text-transform: capitalize;
-  color: white;
+  color: var(--white-color);
+}
+
+/*variety cake 3 */
+#variety-cake3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.squareCake {
+  display: flex;
+  background-color: var(--secondary-color);
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.square-img {
+  display: block;
+  max-width: 100px;
+  height: auto;
+  border-radius: 25px;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.cake-name {
+  font-size: 1.5em;
+  margin: 10px 0 5px;
+  display: inline;
+  color: var(--white-color);
+}
+
+.cake-type {
+  background-color: var(--primary-color);
+  width: max-content;
+  padding: 5px 11px;
+  color: var(--white-color);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.cake-description {
+  color: var(--white-color);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: justify;
+  width: 100%;
+}
+#variety-cake5 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.twoPart {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  margin-top: 2rem;
 }
